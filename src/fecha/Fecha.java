@@ -1,10 +1,13 @@
 
 package fecha;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 
 public class Fecha {
 
-   int dia;
+   int dia;           ;
    int mes;
    int ano;       
 
@@ -12,6 +15,13 @@ public class Fecha {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
+    }
+
+    public Fecha() {
+        Calendar c=new GregorianCalendar();
+       dia = c.get(Calendar.DAY_OF_MONTH);
+       mes=c.get(Calendar.MONTH);
+       ano = c.get(Calendar.YEAR);
     }
              
 }         
